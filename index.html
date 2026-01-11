@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sam Hauck — Sales Support & Internal Sales</title>
+  <meta name="description" content="Sales Support & Internal Sales — Calm, Reliable, System-Driven. Brisbane (North) · Open to hybrid." />
+
+  <!-- Cloudflare Web Analytics (paste your snippet here, above </head>) -->
+  <!-- Example:
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token":"YOUR_TOKEN"}'></script>
+  -->
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #111827;     /* charcoal */
+      --muted: #4b5563;    /* grey */
+      --soft: #f3f4f6;     /* light grey */
+      --border: #e5e7eb;   /* border */
+      --shadow: 0 12px 34px rgba(17,24,39,.08);
+      --radius: 18px;
+      --max: 980px;
+    }
+
+    *{ box-sizing: border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, #f8fafc 0%, transparent 60%),
+        radial-gradient(1200px 600px at 90% 0%, #f3f4f6 0%, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height: 1.55;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px 14px 54px;
+    }
+
+    /* Top bar */
+    .topbar{
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      gap: 10px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.78);
+      backdrop-filter: blur(8px);
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 750;
+      letter-spacing: .2px;
+      min-width: 0;
+    }
+    .dot{
+      width: 10px; height: 10px;
+      border-radius: 999px;
+      background: var(--text);
+      box-shadow: 0 0 0 6px rgba(17,24,39,.07);
+      flex: 0 0 auto;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background:#fff;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+
+    /* Main card */
+    .hero{
+      margin-top: 14px;
+      padding: 18px;
+      border-radius: calc(var(--radius) + 6px);
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    /* Header block with photo */
+    .heroTop{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      align-items:center;
+    }
+    .avatarRow{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+    }
+    .avatar{
+      width: 84px;
+      height: 84px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 26px rgba(17,24,39,.12);
+      flex: 0 0 auto;
+      background: var(--soft);
+    }
+    .nameBlock{
+      min-width: 0;
+    }
+    .kicker{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    h1{
+      margin: 6px 0 0 0;
+      font-size: clamp(26px, 4.3vw, 44px);
+      line-height: 1.12;
+      letter-spacing: -0.6px;
+    }
+    .sub{
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: clamp(15px, 2vw, 18px);
+      max-width: 65ch;
+    }
+
+    /* CTAs */
+    .cta{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background:#fff;
+      font-weight: 700;
+      transition: transform .08s ease, box-shadow .15s ease, border-color .15s ease;
+      user-select:none;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      border-color: #cbd5e1;
+      box-shadow: 0 12px 24px rgba(17,24,39,.10);
+    }
+    .btn.primary{
+      background: var(--text);
+      color:#fff;
+      border-color: var(--text);
+    }
+    .btn.primary:hover{
+      box-shadow: 0 16px 28px rgba(17,24,39,.18);
+    }
+
+    /* Sections */
+    .grid{
+      display:grid;
+      gap: 14px;
+      grid-template-columns: 1fr;
+      margin-top: 16px;
+    }
+    @media (min-width: 860px){
+      .hero{ padding: 26px; }
+      .grid{ grid-template-columns: 1.05fr .95fr; }
+      .heroTop{ grid-template-columns: 1fr; }
+      .avatar{ width: 110px; height: 110px; }
+    }
+
+    .card{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background:#fff;
+      padding: 16px;
+    }
+    .card h2{
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      letter-spacing: -0.2px;
+    }
+    .card p{
+      margin: 0;
+      color: var(--muted);
+    }
+    ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    li{ margin: 8px 0; }
+    strong{ color: var(--text); }
+
+    .tagrow{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .tag{
+      font-size: 13px;
+      color: var(--muted);
+      background: var(--soft);
+      border: 1px solid var(--border);
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+
+    .section{
+      margin-top: 14px;
+    }
+
+    .footer{
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align:center;
+    }
+
+    /* Mobile-first tap targets */
+    @media (max-width: 560px){
+      .wrap{ padding: 14px 12px 50px; }
+      .topbar{ gap: 8px; }
+      .pill{ display:none; } /* keep header clean on phones */
+      .cta{
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn{ width: 100%; }
+      .hero{ padding: 16px; }
+    }
+
+    /* Accessibility focus */
+    .btn:focus, a:focus{
+      outline: 3px solid rgba(59,130,246,.35);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Sam Hauck</span>
+      </div>
+      <div class="pill">Brisbane (North) · Open to hybrid</div>
+    </header>
+
+    <main class="hero">
+      <div class="heroTop">
+        <div class="avatarRow">
+          <!-- Upload your LinkedIn photo to the repo as: sam.jpg -->
+          <img class="avatar" src="./sam.jpg" alt="Sam Hauck" />
+          <div class="nameBlock">
+            <p class="kicker">Brisbane (North) · Open to hybrid</p>
+            <h1>Sales Support &amp; Internal Sales — Calm, Reliable, System-Driven</h1>
+          </div>
+        </div>
+
+        <p class="sub">
+          I support sales teams by keeping communication clear, quotes and orders accurate, and follow-ups consistent —
+          so customers feel looked after and work keeps moving.
+        </p>
+
+        <div class="cta">
+          <!-- This will work once your Cloudflare email routing is set up -->
+          <a class="btn primary" href="mailto:sam@samhauck.site?subject=Sales%20Support%20Role%20-%20Enquiry">Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/samuelhauck" target="_blank" rel="noopener">LinkedIn</a>
+          <!-- Upload your PDF as resume.pdf to enable this -->
+          <a class="btn" href="./resume.pdf" target="_blank" rel="noopener">Download resume</a>
+        </div>
+      </div>
+
+      <div class="grid">
+        <section class="card">
+          <h2>What you get with me</h2>
+          <ul>
+            <li><strong>Reliable quoting &amp; order support</strong> — detail-focused, tidy handovers, clean records.</li>
+            <li><strong>Clear customer communication</strong> — calm, professional, and easy to deal with.</li>
+            <li><strong>Follow-up that actually happens</strong> — organised priorities so nothing is missed.</li>
+          </ul>
+
+          <div class="tagrow" aria-label="skills tags">
+            <span class="tag">Sales support</span>
+            <span class="tag">Internal sales</span>
+            <span class="tag">Customer service</span>
+            <span class="tag">Quoting</span>
+            <span class="tag">Order processing</span>
+            <span class="tag">Coordination</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Experience highlights</h2>
+          <ul>
+            <li><strong>Vita Group — 10 years</strong> across multiple roles, building strong operational foundations.</li>
+            <li><strong>Workshop Manager</strong> experience — coordination, communication, and keeping work moving.</li>
+            <li><strong>B2B / trade exposure</strong> — supporting customers and internal teams in busy environments.</li>
+          </ul>
+          <p style="margin-top:10px; color: var(--muted); font-size: 14px;">
+            References available on request.
+          </p>
+        </section>
+      </div>
+
+      <section class="card section">
+        <h2>What I’m looking for</h2>
+        <p>
+          A <strong>Sales Support / Internal Sales / Admin Support</strong> role in a structured, systems-driven environment
+          where I can support a team, keep jobs moving, and deliver a great customer experience.
+        </p>
+      </section>
+
+      <section class="card section">
+        <h2>Contact</h2>
+        <p>
+          Email is best. I’m happy to jump on a quick call once we’ve exchanged a few details.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:sam@samhauck.site?subject=Sales%20Support%20Role%20-%20Enquiry">Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/samuelhauck" target="_blank" rel="noopener">Message me on LinkedIn</a>
+        </div>
+      </section>
+
+      <div class="footer">
+        © <span id="year"></span> Sam Hauck · samhauck.site
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
