@@ -6,279 +6,191 @@
   <title>Sam Hauck — Sales Support & Internal Sales</title>
   <meta name="description" content="Sales Support & Internal Sales — Calm, Reliable, System-Driven. Brisbane (North) · Open to hybrid." />
 
-  <!-- Cloudflare Web Analytics (paste your snippet here, above </head>) -->
+  <!-- Cloudflare Web Analytics (paste your snippet here) -->
   <!--
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
     data-cf-beacon='{"token":"YOUR_TOKEN"}'></script>
   -->
 
   <style>
-    /* ---------------------------
-      Professional theme (edit these)
-    ---------------------------- */
     :root{
-      --bg: #0b1220;            /* deep navy background */
-      --panel: #0f1a2d;         /* card background */
-      --panel2: #0c1628;        /* darker panel */
-      --text: #eaf0ff;          /* main text */
-      --muted: #b9c6e6;         /* secondary text */
-      --faint: rgba(234,240,255,.10);
+      --bg: #0b1220;
+      --panel: rgba(255,255,255,.04);
       --border: rgba(234,240,255,.14);
-
-      --accent: #3dd6c6;        /* subtle teal accent */
-      --accent2: #6ea8ff;       /* optional secondary accent */
-      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --text: #eaf0ff;
+      --muted: #b9c6e6;
+      --accent: #3dd6c6;
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
       --radius: 18px;
       --max: 980px;
-
-      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
     }
 
     *{ box-sizing: border-box; }
-    html,body{ height: 100%; }
     body{
-      margin: 0;
+      margin:0;
       font-family: var(--font);
       color: var(--text);
       background:
-        radial-gradient(1100px 600px at 12% -8%, rgba(110,168,255,.20) 0%, transparent 55%),
-        radial-gradient(900px 500px at 88% 0%, rgba(61,214,198,.18) 0%, transparent 55%),
-        radial-gradient(700px 520px at 50% 110%, rgba(61,214,198,.10) 0%, transparent 55%),
+        radial-gradient(1100px 600px at 15% -10%, rgba(110,168,255,.18), transparent 55%),
+        radial-gradient(900px 500px at 85% 0%, rgba(61,214,198,.18), transparent 55%),
         var(--bg);
       line-height: 1.55;
     }
 
-    a{ color: inherit; text-decoration: none; }
-    a:hover{ text-decoration: none; }
-
     .wrap{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 18px 14px 56px;
+      padding: 20px 14px 60px;
     }
 
-    /* Top bar */
+    /* Header */
     .topbar{
       display:flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 10px;
+      align-items:center;
       padding: 12px 14px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.04);
     }
+
     .brand{
       display:flex;
       align-items:center;
-      gap: 10px;
-      font-weight: 760;
-      letter-spacing: .2px;
-      min-width: 0;
+      gap:10px;
+      font-weight:700;
     }
+
     .mark{
-      width: 10px; height: 10px;
-      border-radius: 999px;
+      width:10px;
+      height:10px;
+      border-radius:999px;
       background: var(--accent);
-      box-shadow: 0 0 0 6px rgba(61,214,198,.10);
-      flex: 0 0 auto;
+      box-shadow: 0 0 0 6px rgba(61,214,198,.12);
     }
+
     .pill{
-      display:inline-flex;
-      align-items:center;
-      gap: 8px;
-      padding: 8px 10px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: rgba(255,255,255,.03);
+      font-size:13px;
       color: var(--muted);
-      font-size: 13px;
-      white-space: nowrap;
-      flex: 0 0 auto;
-    }
-    .pill .dot{
-      width: 6px; height: 6px;
-      border-radius: 999px;
-      background: rgba(61,214,198,.9);
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:8px 10px;
+      background: rgba(255,255,255,.03);
     }
 
-    /* Hero panel */
+    /* Hero */
     .hero{
-      margin-top: 14px;
-      padding: 18px;
+      margin-top:16px;
+      padding: 26px 20px 28px;
       border-radius: calc(var(--radius) + 6px);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border: 1px solid var(--border);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
       box-shadow: var(--shadow);
-    }
-
-    .heroTop{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-
-    .avatarRow{
-      display:flex;
-      align-items:center;
-      gap: 14px;
-      min-width: 0;
+      text-align:center;
     }
 
     .avatar{
-      width: 86px;
-      height: 86px;
-      border-radius: 999px;
+      width:112px;
+      height:112px;
+      border-radius:999px;
       object-fit: cover;
-      /* you already fixed cropping; keep this if needed */
       object-position: 50% 20%;
-      border: 1px solid var(--border);
-      box-shadow: 0 16px 30px rgba(0,0,0,.35);
-      background: rgba(255,255,255,.04);
-      flex: 0 0 auto;
-    }
-
-    .kicker{
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
+      border:1px solid var(--border);
+      box-shadow: 0 18px 32px rgba(0,0,0,.45);
+      margin-bottom:14px;
     }
 
     h1{
       margin: 6px 0 0 0;
-      font-size: clamp(26px, 4.3vw, 44px);
-      line-height: 1.12;
-      letter-spacing: -0.7px;
+      font-size: clamp(28px, 4.5vw, 44px);
+      line-height:1.15;
+      letter-spacing:-0.6px;
     }
 
     .sub{
-      margin: 10px 0 0 0;
+      margin:14px auto 0;
       color: var(--muted);
+      max-width: 68ch;
       font-size: clamp(15px, 2vw, 18px);
-      max-width: 70ch;
     }
 
-    /* CTAs */
     .cta{
       display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-      align-items:center;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
       justify-content:center;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
+      gap:10px;
+      margin-top:18px;
+      flex-wrap: wrap;
+    }
+
+    .btn{
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid var(--border);
       background: rgba(255,255,255,.03);
       color: var(--text);
-      font-weight: 740;
-      transition: transform .08s ease, box-shadow .15s ease, border-color .15s ease, background .15s ease;
-      user-select:none;
+      font-weight:700;
+      cursor:pointer;
     }
-    .btn:hover{
-      transform: translateY(-1px);
-      border-color: rgba(234,240,255,.25);
-      background: rgba(255,255,255,.05);
-      box-shadow: 0 14px 26px rgba(0,0,0,.28);
-    }
+
     .btn.primary{
       border-color: rgba(61,214,198,.55);
-      background: linear-gradient(180deg, rgba(61,214,198,.22), rgba(61,214,198,.10));
-    }
-    .btn.primary:hover{
-      border-color: rgba(61,214,198,.75);
-      box-shadow: 0 18px 34px rgba(61,214,198,.12), 0 14px 26px rgba(0,0,0,.35);
+      background: linear-gradient(180deg, rgba(61,214,198,.22), rgba(61,214,198,.1));
     }
 
-    /* Layout grid */
-    .grid{
-      display:grid;
-      gap: 14px;
-      grid-template-columns: 1fr;
-      margin-top: 16px;
-    }
-
-    .card{
-      border: 1px solid var(--border);
+    /* Sections */
+    .section{
+      margin-top:18px;
+      padding:18px;
       border-radius: var(--radius);
+      border:1px solid var(--border);
       background: rgba(255,255,255,.03);
-      padding: 16px;
     }
-    .card h2{
-      margin: 0 0 10px 0;
-      font-size: 18px;
-      letter-spacing: -0.2px;
+
+    h2{
+      margin:0 0 10px 0;
+      font-size:14px;
+      letter-spacing:1.4px;
+      color: var(--muted);
+      text-transform: uppercase;
     }
-    .card p{
-      margin: 0;
+
+    p{
+      margin:0;
       color: var(--muted);
     }
 
-    ul{
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-    li{ margin: 8px 0; }
-    strong{ color: var(--text); }
-
+    /* Tags */
     .tagrow{
       display:flex;
+      justify-content:center;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
-    }
-    .tag{
-      font-size: 13px;
-      color: var(--muted);
-      background: rgba(255,255,255,.03);
-      border: 1px solid var(--border);
-      padding: 7px 10px;
-      border-radius: 999px;
+      gap:8px;
+      margin-top:14px;
     }
 
-    .section{ margin-top: 14px; }
+    .tag{
+      font-size:13px;
+      color: var(--muted);
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:7px 10px;
+      background: rgba(255,255,255,.03);
+    }
 
     .footer{
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 13px;
       text-align:center;
-      opacity: .9;
-    }
-
-    /* Desktop */
-    @media (min-width: 860px){
-      .hero{ padding: 26px; }
-      .avatar{ width: 112px; height: 112px; }
-      .grid{ grid-template-columns: 1.05fr .95fr; }
+      margin-top:18px;
+      font-size:13px;
+      color: var(--muted);
+      opacity:.85;
     }
 
     /* Mobile */
-    @media (max-width: 560px){
+    @media (max-width:560px){
       .pill{ display:none; }
-      .cta{ flex-direction: column; align-items: stretch; }
-      .btn{ width: 100%; }
-      .hero{ padding: 16px; }
-    }
-
-    /* Focus */
-    .btn:focus, a:focus{
-      outline: 3px solid rgba(110,168,255,.38);
-      outline-offset: 2px;
-    }
-
-    /* Subtle divider line */
-    .rule{
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(234,240,255,.18), transparent);
-      margin: 14px 0 0 0;
+      .cta{ flex-direction:column; }
+      .btn{ width:100%; }
     }
   </style>
 </head>
@@ -287,94 +199,80 @@
   <div class="wrap">
     <header class="topbar">
       <div class="brand">
-        <span class="mark" aria-hidden="true"></span>
+        <span class="mark"></span>
         <span>Sam Hauck</span>
       </div>
-      <div class="pill"><span class="dot" aria-hidden="true"></span>Brisbane (North) · Open to hybrid</div>
+      <div class="pill">Brisbane (North) · Open to hybrid</div>
     </header>
 
     <main class="hero">
-      <div class="heroTop">
-        <div class="avatarRow">
-          <!-- Keep your photo in the repo root as: sam.jpg -->
-          <img class="avatar" src="./sam.jpg" alt="Sam Hauck" />
-          <div style="min-width:0">
-            <p class="kicker">Brisbane (North) · Open to hybrid</p>
-            <h1>Sales Support &amp; Internal Sales — Calm, Reliable, System-Driven</h1>
-          </div>
-        </div>
+      <img src="./sam.jpg" alt="Sam Hauck" class="avatar" />
 
-        <p class="sub">
-          I provide dependable sales support by keeping customer communication clear, quotes and orders accurate,
-          and follow-ups consistent — helping teams operate smoothly and customers feel well supported.
-        </p>
+      <h1>Sales Support &amp; Internal Sales</h1>
 
-        <div class="cta">
-          <!-- Works once your Cloudflare email routing is active -->
-          <a class="btn primary" href="mailto:sam@samhauck.site?subject=Sales%20Support%20Role%20-%20Enquiry">Email me</a>
-          <a class="btn" href="https://www.linkedin.com/in/samuelhauck" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="./resume.pdf" target="_blank" rel="noopener">Download resume</a>
-        </div>
+      <p class="sub">
+        Calm, reliable, and system-driven support focused on accuracy, follow-through,
+        and clear communication. I help sales teams operate smoothly and ensure customers
+        receive a consistent, professional experience.
+      </p>
 
-        <div class="rule" aria-hidden="true"></div>
-      </div>
-
-      <div class="grid">
-        <section class="card">
-          <h2>What you get with me</h2>
-          <ul>
-            <li><strong>Accurate quoting and order support</strong> — detail-focused handling to ensure clean handovers and reliable records.</li>
-            <li><strong>Clear, professional customer communication</strong> — calm, helpful responses that build trust and reduce friction.</li>
-            <li><strong>Consistent follow-up and coordination</strong> — organised priorities so tasks move forward without being missed.</li>
-          </ul>
-
-          <div class="tagrow" aria-label="skills tags">
-            <span class="tag">Sales support</span>
-            <span class="tag">Internal sales</span>
-            <span class="tag">Customer service</span>
-            <span class="tag">Quoting</span>
-            <span class="tag">Order processing</span>
-            <span class="tag">Coordination</span>
-          </div>
-        </section>
-
-        <section class="card">
-          <h2>How I work</h2>
-          <p>
-            I approach my workload with a strong focus on accuracy, structure, and follow-through. I’m comfortable working
-            behind the scenes to keep information organised, customers informed, and internal teams supported.
-          </p>
-          <ul style="margin-top:10px;">
-            <li>Prioritise clarity and accuracy when handling enquiries and orders.</li>
-            <li>Communicate early if something changes, rather than letting issues escalate.</li>
-            <li>Prefer clear processes and systems that reduce rework and confusion.</li>
-          </ul>
-        </section>
-      </div>
-
-      <section class="card section">
-        <h2>What I’m looking for</h2>
-        <p>
-          A <strong>Sales Support / Internal Sales / Admin Support</strong> role in a structured, systems-driven environment
-          where I can support a team, keep jobs moving, and deliver a great customer experience.
-        </p>
-      </section>
-
-      <section class="card section">
-        <h2>Contact</h2>
-        <p>
-          Email is best. I’m happy to jump on a quick call once we’ve exchanged a few details.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="mailto:sam@samhauck.site?subject=Sales%20Support%20Role%20-%20Enquiry">Email me</a>
-          <a class="btn" href="https://www.linkedin.com/in/samuelhauck" target="_blank" rel="noopener">Message me on LinkedIn</a>
-        </div>
-      </section>
-
-      <div class="footer">
-        © <span id="year"></span> Sam Hauck · samhauck.site
+      <div class="cta">
+        <a class="btn primary" href="mailto:sam@samhauck.site">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/samuelhauck" target="_blank">LinkedIn</a>
+        <a class="btn" href="./resume.pdf" target="_blank">Download resume</a>
       </div>
     </main>
+
+    <section class="section">
+      <h2>What you get</h2>
+      <p>
+        Reliable sales and administrative support with a strong attention to detail.
+        I focus on accurate quoting and order handling, clear customer communication,
+        and consistent follow-up to keep work moving and reduce friction for both customers
+        and internal teams.
+      </p>
+
+      <div class="tagrow">
+        <span class="tag">Sales support</span>
+        <span class="tag">Internal sales</span>
+        <span class="tag">Customer service</span>
+        <span class="tag">Quoting</span>
+        <span class="tag">Order processing</span>
+        <span class="tag">Coordination</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How I work</h2>
+      <p>
+        I work best in structured environments with clear processes and expectations.
+        My approach is methodical and consistent — prioritising accuracy over speed,
+        communicating early when something changes, and ensuring tasks are followed
+        through to completion rather than left unresolved.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>What I’m looking for</h2>
+      <p>
+        A Sales Support, Internal Sales, or Administrative Support role within an organised,
+        systems-driven business. I’m best suited to a position where I can support sales
+        operations, manage day-to-day coordination, and contribute to a stable, professional
+        office environment.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p>
+        Email is the preferred method of contact. I’m happy to arrange a brief call
+        once we’ve connected.
+      </p>
+    </section>
+
+    <div class="footer">
+      © <span id="year"></span> Sam Hauck · samhauck.site
+    </div>
   </div>
 
   <script>
