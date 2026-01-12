@@ -313,8 +313,25 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+  function openLinkedIn(e) {
+    // Try to open the LinkedIn app first
+    const appLink = "linkedin://in/samuelhauck";
+    const webLink = "https://www.linkedin.com/in/samuelhauck";
+
+    // Attempt app open
+    window.location = appLink;
+
+    // Fallback to web after short delay
+    setTimeout(function () {
+      window.location = webLink;
+    }, 500);
+  }
+</script>
+
 </body>
 </html>
+
 
 
 
