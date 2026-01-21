@@ -6,11 +6,7 @@
   <title>Sam Hauck — Sales Support & Internal Sales</title>
   <meta name="description" content="Sales Support & Internal Sales — Calm, Reliable, System-Driven. Brisbane (North) · Open to hybrid." />
 
-  <!-- Cloudflare Web Analytics (paste your snippet here) -->
-  <!--
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-    data-cf-beacon='{"token":"YOUR_TOKEN"}'></script>
-  -->
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4766d126f7784b04887a080856f0a096"}'></script><!-- End Cloudflare Web Analytics -->
 
   <style>
     :root{
@@ -107,6 +103,7 @@
       font-size: clamp(28px, 4.5vw, 44px);
       line-height:1.15;
       letter-spacing:-0.6px;
+      font-weight:800;
     }
 
     .sub{
@@ -158,6 +155,7 @@
       letter-spacing:1.4px;
       color: var(--muted);
       text-transform: uppercase;
+      font-weight:700;
     }
 
     p{
@@ -165,7 +163,7 @@
       color: var(--muted);
     }
 
-    /* Tags */
+    /* Skills tags */
     .section .tags{
       display: flex;
       flex-wrap: wrap;
@@ -207,7 +205,7 @@
       box-shadow:0 0 0 4px rgba(61,214,198,.18);
     }
 
-    /* Quick stats grid */
+    /* Quick overview grid */
     .grid{
       display:grid;
       grid-template-columns: repeat(4, 1fr);
@@ -223,19 +221,21 @@
       text-align:left;
     }
 
+    /* Capitalised labels, no bold feel */
     .stat .k{
       font-size:12px;
-      letter-spacing: .9px;
-      text-transform: uppercase;
+      letter-spacing: .6px;
       color: var(--muted);
       opacity:.9;
+      text-transform:none; /* prevents ALL CAPS */
+      font-weight:600;
     }
     .stat .v{
       margin-top:6px;
-      font-weight:800;
       color: var(--text);
       font-size:14px;
       line-height:1.25;
+      font-weight:500; /* removes bold look */
     }
 
     /* Simple list */
@@ -301,48 +301,41 @@
       <h1>Sales Support &amp; Internal Sales</h1>
 
       <p class="sub">
-        Calm, reliable support across quoting, order processing, and customer communication —
-        helping teams run smoother and keeping customers well looked after.
+        Dependable support across quoting, order processing, and customer communication —
+        helping teams run smoothly and keeping customers well looked after.
       </p>
 
       <div class="cta">
-        <!-- Primary CTA = recruiter-friendly -->
-        <a class="btn primary"
-           href="./Sam_Hauck_Sales_Support_Resume.pdf"
-           target="_blank"
-           data-track="resume_view">View Resume</a>
-
-        <a class="btn"
-           href="mailto:sam@samhauck.site"
-           data-track="email_click">Email</a>
-
-        <a class="btn"
-           href="https://www.linkedin.com/in/samuelhauck"
-           onclick="openLinkedIn(event)"
-           rel="noopener"
-           data-track="linkedin_click">LinkedIn</a>
+        <a class="btn primary" href="./Sam_Hauck_Sales_Support_Resume.pdf" target="_blank" data-track="resume_view">
+          View Resume
+        </a>
+        <a class="btn" href="mailto:sam@samhauck.site" data-track="email_click">
+          Email
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/samuelhauck" onclick="openLinkedIn(event)" rel="noopener" data-track="linkedin_click">
+          LinkedIn
+        </a>
       </div>
     </main>
 
-    <!-- Recruiter fast-scan mode -->
     <section class="section">
       <h2>Quick overview</h2>
       <div class="grid">
         <div class="stat">
           <div class="k">Strength</div>
-          <div class="v">Accuracy + follow-through</div>
+          <div class="v">Accuracy and follow-through</div>
         </div>
         <div class="stat">
-          <div class="k">Work style</div>
+          <div class="k">Work Style</div>
           <div class="v">System-driven, calm under pressure</div>
         </div>
         <div class="stat">
-          <div class="k">Best fit</div>
-          <div class="v">Sales support · Internal sales · Admin</div>
+          <div class="k">Best Fit</div>
+          <div class="v">Sales support, internal sales, admin</div>
         </div>
         <div class="stat">
           <div class="k">Location</div>
-          <div class="v">Brisbane North · Hybrid OK</div>
+          <div class="v">Brisbane North, hybrid ok</div>
         </div>
       </div>
     </section>
@@ -376,37 +369,24 @@
       </div>
     </section>
 
-    <!-- Hiring manager mode: impact framing -->
     <section class="section">
       <h2>How I add value</h2>
       <ul class="list">
-        <li>Keep order flow clean and consistent so jobs don’t stall or bounce back-and-forth.</li>
-        <li>Reduce admin load on sales teams through accurate data entry, follow-ups, and tidy handovers.</li>
-        <li>Improve customer experience with clear updates, realistic timelines, and calm problem-solving.</li>
-        <li>Work methodically to prevent avoidable errors (credits, rework, invoice mismatches).</li>
+        <li>Keep quoting and order flow tidy so work doesn’t stall or bounce around internally.</li>
+        <li>Take pressure off the sales team by staying on top of follow-ups and admin detail.</li>
+        <li>Keep customers informed with clear updates, realistic timelines, and calm problem-solving.</li>
+        <li>Spot issues early and help prevent avoidable rework (credits, mismatches, invoice errors).</li>
       </ul>
     </section>
 
     <section class="section">
-      <h2>Tools &amp; systems</h2>
-      <div class="tags">
-        <span>Excel</span>
-        <span>CRM</span>
-        <span>Invoicing</span>
-        <span>Order Processing</span>
-        <span>Quoting</span>
-        <span>Documentation</span>
-        <span>Process Checklists</span>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Experience snapshot</h2>
-      <ul class="list">
-        <li>Sales support, quoting, order processing, customer updates.</li>
-        <li>Internal coordination between sales, admin, and operations.</li>
-        <li>Structured, repeatable work habits with strong follow-through.</li>
-      </ul>
+      <h2>How I work</h2>
+      <p>
+        I work best in structured environments with clear processes and expectations.
+        My approach is methodical and consistent — prioritising accuracy over speed,
+        communicating early when something changes, and ensuring tasks are followed
+        through to completion rather than left unresolved.
+      </p>
     </section>
 
     <section class="section">
@@ -418,22 +398,28 @@
       </p>
     </section>
 
-    <!-- Conversion layer -->
     <section class="section" style="text-align:center;">
       <h2>Next step</h2>
       <p style="max-width:68ch; margin:0 auto;">
-        If you’re reviewing candidates, the fastest way to assess fit is the resume.
-        If it aligns, email is best and I’m happy to jump on a brief call.
+        If you’d like a quick look at my background, the resume covers it.
+        If it looks like a match, feel free to email me and we can line up a short chat.
       </p>
       <div class="cta" style="margin-top:14px;">
-        <a class="btn primary"
-           href="./Sam_Hauck_Sales_Support_Resume.pdf"
-           target="_blank"
-           data-track="resume_view_bottom">View Resume</a>
-        <a class="btn"
-           href="mailto:sam@samhauck.site"
-           data-track="email_click_bottom">Email</a>
+        <a class="btn primary" href="./Sam_Hauck_Sales_Support_Resume.pdf" target="_blank" data-track="resume_view_bottom">
+          View Resume
+        </a>
+        <a class="btn" href="mailto:sam@samhauck.site" data-track="email_click_bottom">
+          Email
+        </a>
       </div>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p>
+        Email is the preferred method of contact. I’m happy to arrange a brief call
+        once we’ve connected.
+      </p>
     </section>
 
     <div class="footer">
@@ -444,16 +430,9 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Lightweight click tracking (works even without analytics; no external calls)
-    // If you later add an analytics tool, you can hook into this function.
+    // Lightweight click tracking (optional)
     function track(label){
-      try {
-        // Example hook points (optional):
-        // if (window.gtag) gtag('event', label);
-        // if (window.clarity) clarity('event', label);
-        // console fallback:
-        console.log("[track]", label);
-      } catch (e) {}
+      try { console.log("[track]", label); } catch (e) {}
     }
 
     document.addEventListener("click", function(e){
@@ -463,8 +442,6 @@
     });
 
     function openLinkedIn(e) {
-      // On many desktops this won't do anything (no app), but mobile can benefit.
-      // Prevent default so our attempt can run, then fallback to web.
       e.preventDefault();
 
       const appLink = "linkedin://in/samuelhauck";
