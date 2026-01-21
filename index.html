@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sam Hauck — Sales Support & Internal Sales</title>
+  <meta name="description" content="Sales Support & Internal Sales — Calm, Reliable, System-Driven. Brisbane (North) · Open to hybrid." />
+
+  <!-- Cloudflare Web Analytics (paste your snippet here) -->
+  <!--
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token":"YOUR_TOKEN"}'></script>
+  -->
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --panel: rgba(255,255,255,.04);
+      --border: rgba(234,240,255,.14);
+      --text: #eaf0ff;
+      --muted: #b9c6e6;
+      --accent: #3dd6c6;
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 980px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: var(--font);
+      color: var(--text);
+      background:
+        radial-gradient(1100px 600px at 15% -10%, rgba(110,168,255,.18), transparent 55%),
+        radial-gradient(900px 500px at 85% 0%, rgba(61,214,198,.18), transparent 55%),
+        var(--bg);
+      line-height: 1.55;
+    }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 20px 14px 60px;
+    }
+
+    /* Header */
+    .topbar{
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+    }
+
+    .mark{
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(61,214,198,.12);
+    }
+
+    .pill{
+      font-size:13px;
+      color: var(--muted);
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:8px 10px;
+      background: rgba(255,255,255,.03);
+    }
+
+    /* Hero */
+    .hero{
+      margin-top:16px;
+      padding: 26px 20px 28px;
+      border-radius: calc(var(--radius) + 6px);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--shadow);
+      text-align:center;
+    }
+
+    .avatar{
+      width:160px;
+      height:160px;
+      border-radius:999px;
+      object-fit: cover;
+      object-position: 50% 20%;
+      border:1px solid var(--border);
+      box-shadow: 0 18px 32px rgba(0,0,0,.45);
+      margin-bottom:16px;
+      image-rendering: auto;
+    }
+
+    h1{
+      margin: 6px 0 0 0;
+      font-size: clamp(28px, 4.5vw, 44px);
+      line-height:1.15;
+      letter-spacing:-0.6px;
+    }
+
+    .sub{
+      margin:14px auto 0;
+      color: var(--muted);
+      max-width: 68ch;
+      font-size: clamp(15px, 2vw, 18px);
+    }
+
+    .cta{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      margin-top:18px;
+      flex-wrap: wrap;
+    }
+
+    .btn{
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      font-weight:700;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .btn.primary{
+      border-color: rgba(61,214,198,.55);
+      background: linear-gradient(180deg, rgba(61,214,198,.22), rgba(61,214,198,.1));
+    }
+
+    /* Sections */
+    .section{
+      margin-top:18px;
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+    }
+
+    h2{
+      margin:0 0 10px 0;
+      font-size:14px;
+      letter-spacing:1.4px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    p{
+      margin:0;
+      color: var(--muted);
+    }
+
+    /* Tags */
+    .section .tags{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .section .tags span{
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      white-space: nowrap;
+      color: var(--muted);
+    }
+
+    /* Availability indicator */
+    .availability{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:600;
+      color:#c9f7ef;
+      background:rgba(61,214,198,.12);
+      border:1px solid rgba(61,214,198,.35);
+    }
+
+    .status-dot{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:#3dd6c6;
+      box-shadow:0 0 0 4px rgba(61,214,198,.18);
+    }
+
+    /* Quick stats grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .stat{
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      text-align:left;
+    }
+
+    .stat .k{
+      font-size:12px;
+      letter-spacing: .9px;
+      text-transform: uppercase;
+      color: var(--muted);
+      opacity:.9;
+    }
+    .stat .v{
+      margin-top:6px;
+      font-weight:800;
+      color: var(--text);
+      font-size:14px;
+      line-height:1.25;
+    }
+
+    /* Simple list */
+    .list{
+      margin:10px 0 0 0;
+      padding:0;
+      list-style:none;
+      color: var(--muted);
+    }
+    .list li{
+      margin:8px 0;
+      padding-left:18px;
+      position:relative;
+    }
+    .list li::before{
+      content:"•";
+      position:absolute;
+      left:0;
+      color: rgba(61,214,198,.85);
+    }
+
+    .footer{
+      text-align:center;
+      margin-top:18px;
+      font-size:13px;
+      color: var(--muted);
+      opacity:.85;
+    }
+
+    /* Mobile */
+    @media (max-width:860px){
+      .grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width:560px){
+      .pill{ display:none; }
+      .cta{ flex-direction:column; }
+      .btn{ width:100%; }
+      .grid{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <span class="mark"></span>
+        <span>Sam Hauck</span>
+      </div>
+
+      <div style="display:flex; gap:10px; align-items:center;">
+        <div class="availability">
+          <span class="status-dot"></span>
+          Available now
+        </div>
+        <div class="pill">Brisbane (North) · Open to hybrid</div>
+      </div>
+    </header>
+
+    <main class="hero">
+      <img src="./sam.jpg" alt="Sam Hauck" class="avatar" />
+
+      <h1>Sales Support &amp; Internal Sales</h1>
+
+      <p class="sub">
+        Calm, reliable support across quoting, order processing, and customer communication —
+        helping teams run smoother and keeping customers well looked after.
+      </p>
+
+      <div class="cta">
+        <!-- Primary CTA = recruiter-friendly -->
+        <a class="btn primary"
+           href="./Sam_Hauck_Sales_Support_Resume.pdf"
+           target="_blank"
+           data-track="resume_view">View Resume</a>
+
+        <a class="btn"
+           href="mailto:sam@samhauck.site"
+           data-track="email_click">Email</a>
+
+        <a class="btn"
+           href="https://www.linkedin.com/in/samuelhauck"
+           onclick="openLinkedIn(event)"
+           rel="noopener"
+           data-track="linkedin_click">LinkedIn</a>
+      </div>
+    </main>
+
+    <!-- Recruiter fast-scan mode -->
+    <section class="section">
+      <h2>Quick overview</h2>
+      <div class="grid">
+        <div class="stat">
+          <div class="k">Strength</div>
+          <div class="v">Accuracy + follow-through</div>
+        </div>
+        <div class="stat">
+          <div class="k">Work style</div>
+          <div class="v">System-driven, calm under pressure</div>
+        </div>
+        <div class="stat">
+          <div class="k">Best fit</div>
+          <div class="v">Sales support · Internal sales · Admin</div>
+        </div>
+        <div class="stat">
+          <div class="k">Location</div>
+          <div class="v">Brisbane North · Hybrid OK</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What you get</h2>
+      <p>
+        Reliable sales and administrative support with strong attention to detail.
+        I focus on accurate quoting and order handling, clear customer communication,
+        and consistent follow-up to reduce friction for both customers and internal teams.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Skills &amp; capabilities</h2>
+      <div class="tags">
+        <span>Internal Sales</span>
+        <span>Sales Operations</span>
+        <span>Administrative Assistance</span>
+        <span>Team Coordination</span>
+        <span>Customer Service</span>
+        <span>Account Management</span>
+        <span>Order Processing</span>
+        <span>Quote Preparation</span>
+        <span>Invoicing</span>
+        <span>CRM</span>
+        <span>Microsoft Excel</span>
+        <span>Data Entry</span>
+        <span>Process Improvement</span>
+        <span>Attention to Detail</span>
+      </div>
+    </section>
+
+    <!-- Hiring manager mode: impact framing -->
+    <section class="section">
+      <h2>How I add value</h2>
+      <ul class="list">
+        <li>Keep order flow clean and consistent so jobs don’t stall or bounce back-and-forth.</li>
+        <li>Reduce admin load on sales teams through accurate data entry, follow-ups, and tidy handovers.</li>
+        <li>Improve customer experience with clear updates, realistic timelines, and calm problem-solving.</li>
+        <li>Work methodically to prevent avoidable errors (credits, rework, invoice mismatches).</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Tools &amp; systems</h2>
+      <div class="tags">
+        <span>Excel</span>
+        <span>CRM</span>
+        <span>Invoicing</span>
+        <span>Order Processing</span>
+        <span>Quoting</span>
+        <span>Documentation</span>
+        <span>Process Checklists</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Experience snapshot</h2>
+      <ul class="list">
+        <li>Sales support, quoting, order processing, customer updates.</li>
+        <li>Internal coordination between sales, admin, and operations.</li>
+        <li>Structured, repeatable work habits with strong follow-through.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>What I’m looking for</h2>
+      <p>
+        A Sales Support, Internal Sales, or Sales Administration role within a structured, systems-driven business.
+        I’m best suited to supporting sales operations, managing quoting and order flow, and coordinating day-to-day
+        customer and internal communication to keep work moving efficiently.
+      </p>
+    </section>
+
+    <!-- Conversion layer -->
+    <section class="section" style="text-align:center;">
+      <h2>Next step</h2>
+      <p style="max-width:68ch; margin:0 auto;">
+        If you’re reviewing candidates, the fastest way to assess fit is the resume.
+        If it aligns, email is best and I’m happy to jump on a brief call.
+      </p>
+      <div class="cta" style="margin-top:14px;">
+        <a class="btn primary"
+           href="./Sam_Hauck_Sales_Support_Resume.pdf"
+           target="_blank"
+           data-track="resume_view_bottom">View Resume</a>
+        <a class="btn"
+           href="mailto:sam@samhauck.site"
+           data-track="email_click_bottom">Email</a>
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="year"></span> Sam Hauck · samhauck.site
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Lightweight click tracking (works even without analytics; no external calls)
+    // If you later add an analytics tool, you can hook into this function.
+    function track(label){
+      try {
+        // Example hook points (optional):
+        // if (window.gtag) gtag('event', label);
+        // if (window.clarity) clarity('event', label);
+        // console fallback:
+        console.log("[track]", label);
+      } catch (e) {}
+    }
+
+    document.addEventListener("click", function(e){
+      const el = e.target.closest("[data-track]");
+      if (!el) return;
+      track(el.getAttribute("data-track"));
+    });
+
+    function openLinkedIn(e) {
+      // On many desktops this won't do anything (no app), but mobile can benefit.
+      // Prevent default so our attempt can run, then fallback to web.
+      e.preventDefault();
+
+      const appLink = "linkedin://in/samuelhauck";
+      const webLink = "https://www.linkedin.com/in/samuelhauck";
+
+      window.location = appLink;
+
+      setTimeout(function () {
+        window.location = webLink;
+      }, 500);
+    }
+  </script>
+
+</body>
+</html>
